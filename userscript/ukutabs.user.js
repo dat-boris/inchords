@@ -8,7 +8,7 @@
     "use strict";
 
     injectCode(
-        "$('.qoate-code span').each(function(data) {$(this).html(\"<img src='http://cdn1.ukutabs.com/chords/\"+$(this).html()+\".png' alt='Am chord' class='chord' width='61' height='90'>\");});"
+        "$('.qoate-code span').each(function(data) {var c = $(this).html();var link = c.replace('#','_');$(this).html(\"<img src='http://cdn1.ukutabs.com/chords/\"+link+\".png' alt='Am chord' class='chord' width='61' height='90'>\");});"
     );
     
     function injectCode(code) {
@@ -18,5 +18,3 @@
     }
 
 }())
-
-
